@@ -2,7 +2,7 @@ import React from 'react'
 
 const Homemain = () => {
   return (
-    <div className='text-black py-10 bg-white h-[300vh]  md:min-h-[230vh] lg:min-h-[175vh]'>
+    <div className='text-black py-10 bg-white min-h-[270vh]  md:min-h-[140vh] lg:min-h-[180vh]'>
       <div>
         <p className='font-bold text-xl lg:px-1 px-6  tracking-tight lg:tracking-normal text-center'><span className='lg:block'>Volto is a React-based frontend for content management systems, currently supporting</span> three backend implementations: Plone, Guillotina and a Node JS refrence implementation.</p>
       </div>
