@@ -35,7 +35,7 @@ const Navbar = () => {
                                         isActive ? "font-semibold w-1/2 text-lg border-b-2 border-[#29A399] rounded-none" : "font-semibold text-lg"
                                     }
                                 >
-                                    ghar
+                                    Home
                                 </NavLink>
                             </li>
                             <li>
@@ -45,7 +45,7 @@ const Navbar = () => {
                                         isActive ? "font-semibold w-1/2 text-lg border-b-2 border-[#29A399] rounded-none" : "font-semibold text-lg"
                                     }
                                 >
-                                    phone
+                                    Contact
                                 </NavLink>
                             </li>
                             <li>
