@@ -105,7 +105,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end flex gap-7">
-                    <a className="inline-block tracking-tighter w-20">Sign in</a>
+                    <a className="inline-block tracking-tighter w-20 cursor-pointer">Sign in</a>
 
                     <div className='hidden lg:flex border-2 border-[#0B78D0] rounded-sm'>
                         <label className="input bg-white w-[230px]">
