@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import toast from 'react-hot-toast'
 
 const ContactMain = () => {
+
     const notify = (e) => {
         e.preventDefault()
-
         toast.success("Your message has been sent successfully")
     }
 
