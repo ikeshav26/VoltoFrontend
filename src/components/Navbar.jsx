@@ -32,7 +32,7 @@ const Navbar = () => {
                                 <NavLink
                                     to="/"
                                     className={({ isActive }) =>
-                                        isActive ? "font-semibold w-1/2 text-lg border-b-2 border-[#29A399] rounded-none" : "font-semibold text-lg"
+                                        isActive ? "font-semibold w-1/2 text-lg border-b-3 border-[#29A399] rounded-none" : "font-semibold text-lg"
                                     }
                                 >
                                     Home
@@ -42,7 +42,7 @@ const Navbar = () => {
                                 <NavLink
                                     to="/contact"
                                     className={({ isActive }) =>
-                                        isActive ? "font-semibold w-1/2 text-lg border-b-2 border-[#29A399] rounded-none" : "font-semibold text-lg"
+                                        isActive ? "font-semibold w-1/2 text-lg border-b-3 border-[#29A399] rounded-none" : "font-semibold text-lg"
                                     }
                                 >
                                     Contact
@@ -52,7 +52,7 @@ const Navbar = () => {
                                 <NavLink
                                     to="/accessibility"
                                     className={({ isActive }) =>
-                                        isActive ? "font-semibold w-1/2 text-lg border-b-2 border-[#29A399] rounded-none" : "font-semibold text-lg"
+                                        isActive ? "font-semibold w-1/2 text-lg border-b-3 border-[#29A399] rounded-none" : "font-semibold text-lg"
                                     }
                                 >
                                     Accessibility
@@ -76,7 +76,7 @@ const Navbar = () => {
                             <NavLink
                                 to="/"
                                 className={({ isActive }) =>
-                                    isActive ? "font-semibold text-lg border-b-2 border-[#29A399] rounded-none" : "font-semibold text-lg"
+                                    isActive ? "font-semibold text-lg border-b-3 border-[#29A399] rounded-none" : "font-semibold text-lg"
                                 }
                             >
                                 Home
@@ -86,7 +86,7 @@ const Navbar = () => {
                             <NavLink
                                 to="/contact"
                                 className={({ isActive }) =>
-                                    isActive ? "font-semibold text-lg border-b-2 border-[#29A399] rounded-none" : "font-semibold text-lg"
+                                    isActive ? "font-semibold text-lg border-b-3 border-[#29A399] rounded-none" : "font-semibold text-lg"
                                 }
                             >
                                 Contact
@@ -96,7 +96,7 @@ const Navbar = () => {
                             <NavLink
                                 to="/accessibility"
                                 className={({ isActive }) =>
-                                    isActive ? "font-semibold text-lg border-b-2 border-[#29A399] rounded-none" : "font-semibold text-lg"
+                                    isActive ? "font-semibold text-lg border-b-3 border-[#29A399] rounded-none" : "font-semibold text-lg"
                                 }
                             >
                                 Accessibility
@@ -107,10 +107,10 @@ const Navbar = () => {
                 <div className="navbar-end flex gap-7">
                     <a className="inline-block tracking-tighter w-20">Sign in</a>
 
-                    <div className='hidden lg:flex'>
+                    <div className='hidden lg:flex border-2 border-[#0B78D0] rounded-sm'>
                         <label className="input bg-white w-[230px]">
-                            <input type="search" required className='text-[#085696] font-semibold' placeholder="Search Site" />
-                            <svg className="h-[1.5em] opacity-50 text-[#085696] font-semibold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <input type="search" required className='text-[#0B78D0] font-semibold ' placeholder="Search Site" />
+                            <svg className="h-[1.5em] opacity-50 text-[#0B78D0] font-semibold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <g
                                     strokeLinejoin="round"
                                     strokeLinecap="round"
