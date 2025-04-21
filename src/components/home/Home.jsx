@@ -6,7 +6,7 @@ import Footer from '../Footer'
 
 const Home = () => {
   return (
-    <div className='bg-[#D6F5F2]  overflow-hidden'>
+    <div className='bg-[#D6F5F2]   overflow-hidden'>
         <Navbar/>
         <Homebanner/>
         <Homemain/>

@@ -2,6 +2,12 @@ import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
+
+
+    const loggedinUser=localStorage.getItem("user") ;
+    
+
+
     return (
         <div className=''>
             <div className="fixed top-0 z-50 w-full lg:px-20 py-4 px-6 backdrop-blur-2xl navbar shadow-sm text-[#021322]">
@@ -105,7 +111,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end flex gap-7">
-                    <Link to="/signin" className="inline-block tracking-tighter w-20 cursor-pointer">Sign in</Link>
+                    <Link to="/signin" className="inline-block tracking-tighter w-20 cursor-pointer">{loggedinUser?<p className='bg-red-400 text-center  py-1 rounded-xl hover:scale-103'>logout</p>:<p>signin</p>}</Link>
 
                     <div className='hidden lg:flex border-2 border-[#0B78D0] rounded-sm'>
                         <label className="input bg-white w-[230px]">
