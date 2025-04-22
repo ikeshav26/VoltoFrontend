@@ -20,7 +20,7 @@ const Signin = () => {
             if (res.data) {
                 toast.success("Login Successful");
                 localStorage.setItem("user", JSON.stringify(res.data));
-                navigate("/");
+                navigate("/UserHome");
             }
         } catch (err) {
             console.error(err);

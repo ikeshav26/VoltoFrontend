@@ -2,7 +2,7 @@ import React from 'react'
 
 const Homebanner = () => {
     return (
-        <div className='mt-20  flex flex-col h-[90vh] justify-around items-center'>
+        <div className='mt-20   flex flex-col h-[90vh] justify-around items-center'>
             <div className='flex flex-col gap-12 px-1 justify-center items-center'>
                 <h1 className='text-black z-5 font-bold text-center  text-7xl tracking-tight'>Welcome to Volto</h1>
                 <h4 className='text-[#29A399] text-center tracking-tight font-bold text-2xl'>The React powered content management system</h4>

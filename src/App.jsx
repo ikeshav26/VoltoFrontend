@@ -6,6 +6,7 @@ import Contact from './components/contact/Contact'
 import { Toaster } from 'react-hot-toast'
 import Signin from './components/Signin'
 import Login from './components/Login'
+import Userhome from './components/User profile/Userhome'
 
 const App = () => {
   
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path='/signin' element={<Signin/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/UserHome' element={<Userhome/>}></Route>
       </Routes>
       <Toaster/>
     </div>

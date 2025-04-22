@@ -123,7 +123,7 @@ const Navbar = () => {
                 <div className="navbar-end flex gap-7">
                     {loggedinUser?<Link to="/"><button onClick={submitHandler} className='bg-red-400 cursor-pointer text-center px-3  py-1 rounded-xl hover:scale-103'>logout</button></Link>:<Link to="/signin" className="inline-block tracking-tighter w-20 cursor-pointer"><button>signin</button></Link>}
 
-                    <div className='hidden lg:flex border-2 border-[#0B78D0] rounded-sm'>
+                    <div className='hidden lg:flex border-1 border-[#0B78D0] rounded-sm'>
                         <label className="input bg-white w-[230px]">
                             <input type="search" required className='text-[#0B78D0] font-semibold ' placeholder="Search Site" />
                             <svg className="h-[1.5em] opacity-50 text-[#0B78D0] font-semibold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
