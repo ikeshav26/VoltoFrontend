@@ -1,7 +1,32 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link , useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import { toast } from 'react-hot-toast'
 
 const Login = () => {
+    const navigate = useNavigate()
+
+    const submitHandler =async (e) => {
+        e.preventDefault()
+
+        const userInfo={
+            username:e.target.username.value,
+            password:e.target.password.value
+        }
+        try{
+            const res=await axios.post('http://localhost:5000/login',userInfo)
+            if(res.data){
+                toast.success("Login Successful")
+                localStorage.setItem("user",JSON.stringify(res.data))
+                navigate("/")
+            }
+        }catch(err){
+            console.error(err)
+            toast.error("Login Failed")
+        }
+
+    }
+
     return (
         <div className='w-full h-screen flex overflow-hidden '>
             <div className='w-full bg-white flex flex-col justify-center items-center gap-24'>
@@ -26,9 +51,9 @@ const Login = () => {
                     <h2 className='text-black font-bold text-2xl'>Login to Volto</h2>
                 </div>
                 <div className='w-full'>
-                    <form>
+                    <form onSubmit={submitHandler}>
                         <div className='flex flex-col gap-6 justify-center items-center'>
-                            <div><input type="text" name="name" required className="input md:w-[40vw] h-[48px] text-[#0B78D0] bg-[#F2F4F7] font-bold" placeholder="Username" /></div>
+                            <div><input type="text" name="username" required className="input md:w-[40vw] h-[48px] text-[#0B78D0] bg-[#F2F4F7] font-bold" placeholder="Username" /></div>
                             <div className='flex flex-col gap-3 '>
                                 <input type="password" name="password" required className="input  md:w-[40vw] h-[48px] text-[#0B78D0] bg-[#F2F4F7] font-bold" placeholder="Enter your password" />
                                 <p className='text-[#617789] text-sm md:text-md'>Forgot password? Request a <span className='text-[#0b78D0] font-semibold'>New password</span></p>
