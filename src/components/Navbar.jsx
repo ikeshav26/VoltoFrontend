@@ -1,10 +1,20 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { toast } from 'react-hot-toast'
 
 const Navbar = () => {
 
-
+    const navigate=useNavigate()
     const loggedinUser=localStorage.getItem("user") ;
+
+    const submitHandler=()=>{
+        localStorage.removeItem("user")
+        toast.success("Logout Successfully")
+       setTimeout(()=>{
+        window.location.reload()
+       },3000)
+       navigate("/")
+    }
     
 
 
@@ -111,7 +121,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end flex gap-7">
-                    <Link to="/signin" className="inline-block tracking-tighter w-20 cursor-pointer">{loggedinUser?<p className='bg-red-400 text-center  py-1 rounded-xl hover:scale-103'>logout</p>:<p>signin</p>}</Link>
+                    {loggedinUser?<Link to="/"><button onClick={submitHandler} className='bg-red-400 cursor-pointer text-center px-3  py-1 rounded-xl hover:scale-103'>logout</button></Link>:<Link to="/signin" className="inline-block tracking-tighter w-20 cursor-pointer"><button>signin</button></Link>}
 
                     <div className='hidden lg:flex border-2 border-[#0B78D0] rounded-sm'>
                         <label className="input bg-white w-[230px]">
